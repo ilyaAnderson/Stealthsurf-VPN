@@ -209,7 +209,7 @@ a:hover {
 .iPad {
     box-sizing: border-box;
     padding: 30px;
-    background-image: url("Photo/0uQOtt1RDWO57ZysKpGCDztBYu8.webp");
+    background-image: url("./Photo/0uQOtt1RDWO57ZysKpGCDztBYu8.webp");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -249,7 +249,7 @@ a:hover {
 
   z-index: 2; /* Поднимает контент выше бегущей линии */
   color: var(--main-color-text-lighter);
-    background-image: url("Photo/0uQOtt1RDWO57ZysKpGCDztBYu8.webp");
+    background-image: url("./Photo/0uQOtt1RDWO57ZysKpGCDztBYu8.webp");
     background-repeat: no-repeat;
     background-position: 50% 0px;
     background-size: contain;
@@ -319,7 +319,7 @@ a:hover {
 }
 .about-us-block-phone, .private-servers-phone {
     border-radius: 30px;
-    background-image: url("Photo/0Vad2x2MqW8hXYWB5Z2w8w60Vjc.webp");
+    background-image: url("./Photo/0Vad2x2MqW8hXYWB5Z2w8w60Vjc.webp");
     background-position: 50% 100%;
     background-size: 50%;
     background-repeat: no-repeat;

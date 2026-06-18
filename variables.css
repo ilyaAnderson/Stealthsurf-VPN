@@ -16,11 +16,11 @@
     --color-border-online: rgba(120, 138, 255, 0.2);
     --color-button-news: rgb(255, 255, 255);
     --color-button-news-dark: rgb(157, 157, 157, 0);
-    --icon-question-answer: url(/Photo/wElrZEY5NbOHjV30YrOWyP9vH0white.svg);
+    --icon-question-answer: url(Photo/wElrZEY5NbOHjV30YrOWyP9vH0white.svg);
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --icon-question-answer: url(/Photo/wElrZEY5NbOHjV30YrOWyP9vH0.svg);
+    --icon-question-answer: url(Photo/wElrZEY5NbOHjV30YrOWyP9vH0.svg);
     --color-button-news: rgb(31, 30, 36);
     --color-button-news-dark: #0c0b1500;
     --color-shadow-online: rgba(148, 198, 255, 0.25);

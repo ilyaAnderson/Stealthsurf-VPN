@@ -1,0 +1,53 @@
+@import "variables.css";
+@keyframes header-scroll {
+    0% { background-color: rgba(128, 128, 128, 0);}
+    100% { background: var(--main-color-black-gray) ; }
+}
+@keyframes rotate-glow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes slider-block {
+    to { transform: translateX(calc(-100% - 25px)); }
+    from { transform: translateX(0%); }
+}
+@keyframes goodmorning {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes header-appearance {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(0); }
+}
+@keyframes about-us-phone-move {
+    0% { opacity: 0; transform: translateX(100px);}
+    100% { opacity: 1; transform: translateX(0px);}
+}
+@keyframes about-us-text-move {
+    0% { opacity: 1; transform: translateX(-100px);}
+    100% { opacity: 1; transform: translateX(0px);}
+}
+@keyframes about-us-text-move-top {
+    0% { opacity: 0; transform: translateY(100px);}
+    100% { opacity: 1; transform: translateY(0px);}
+}
+@keyframes phone-move {
+    0% { opacity: 0; transform: translateY(100px);}
+    100% { opacity: 1; transform: translateY(0px);}
+}
+@keyframes question-move-right {
+    0% { opacity: 0; transform: translateX(-300px);}
+    100% { opacity: 1; transform: translateX(0px);}
+}
+@keyframes question-move-left {
+    0% { opacity: 0; transform: translateX(300px);}
+    100% { opacity: 1; transform: translateX(0px);}
+}

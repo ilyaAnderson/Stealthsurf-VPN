@@ -399,7 +399,7 @@ a:hover {
     transform: translateY(-50%);
     width: 20px; 
     height: 20px; 
-    background-image: url('Photo/591FgwOFp0UbGjaCNN9fqz02HI.svg');
+    background-image: url('./Photo/591FgwOFp0UbGjaCNN9fqz02HI.svg');
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -462,14 +462,14 @@ a:hover {
     height: 200px;
     width: 100%;
     height: 100%;
-    background-image: url("Photo/79teG2rQpGyFB5GQBWGx2UZh0dI.svg");
+    background-image: url("./Photo/79teG2rQpGyFB5GQBWGx2UZh0dI.svg");
     background-position: center;
     background-size: 20%;
     background-repeat: no-repeat;
     z-index: 1;
 }
 .smart-location-icon-fon {
-    background-image: url("Photo/CwE8q8sMSUO471g924AKYTsrs.svg");
+    background-image: url("./Photo/CwE8q8sMSUO471g924AKYTsrs.svg");
     background-size: 45%;
     z-index: 0;
 }
@@ -513,7 +513,7 @@ a:hover {
 }
 .private-servers-phone {
     margin-right: 40px;
-    background-image: url("Photo/3zd56ykVndknlwalBaB0ySd4w.webp");
+    background-image: url("./Photo/3zd56ykVndknlwalBaB0ySd4w.webp");
 }
 .private-servers-block {
     display: flex;

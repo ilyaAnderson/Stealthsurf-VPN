@@ -8,8 +8,7 @@
     <link rel="icon" href="https://cdn3d.iconscout.com/3d/premium/thumb/vpn-3d-icon-png-download-7412300.png">
     <link rel="stylesheet" href="animation.css">
     <link rel="stylesheet" href="css.css">
-    <link rel="stylesheet" href="variables.css">
-    <link rel="stylesheet" href="mobile-fixes.css">
+    <link rel="stylesheet" href="responsive.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100..900&display=swap" rel="stylesheet">
@@ -17,35 +16,32 @@
 <body>
 <header>
     <div class="container">
-        <a href="#">
-            <p>Annders VPN</p>
+        <a href="#main" aria-label="Stealthsurf VPN — наверх">
+            <p>Stealthsurf VPN</p>
         </a>
     </div>
     <div id="menu" class="container">
         <a id="button-about" href="#about-us">О нас</a>
-        <a id="button-price" href="#price">Стоимость</a>
-        <a id="button-document" href="#">Документация</a>
-        <a id="button-telegram" href="#">Телеграм</a>
-        <a id="button-help" href="#">Поддержка</a>
+        <a id="button-price" href="#price-service">Стоимость</a>
+        <a id="button-document" href="#smart-location">Возможности</a>
+        <a id="button-help" href="#question-answer">FAQ</a>
     </div>
-    <div class="container" style="padding-left: 0px; padding-right: 80px;">
-        <div class="button">
-            <p>В консоль</p>
+    <div class="container header-action-container">
+        <button class="button" type="button" data-open-demo="console">
+            <span>В консоль</span>
             <div class="arrow"></div>
-        </div>
+        </button>
     </div>
 </header>
 <main>
     <div id="main" class="slide">
-        <div id="main-button-give-config" class="button" style="z-index: 1;">
-            <p>Получить VPN-конфиг</p>
+        <button id="main-button-give-config" class="button" type="button" data-open-demo="config">
+            <span>Получить VPN-конфиг</span>
             <div class="arrow"></div>
-        </div>
+        </button>
         <div class="main-text-information" style="z-index: 1;">
-            Надёжный VPN-сервис для безопасного и анонимного интернет-доступа на iOS, Android, Windows, <br>
-            macOS и Linux с поддержкой протоколов VLESS, Trojan, Hysteria2, Shadowsocks, AmneziaWG 2.0, <br>
-            WireGuard, HTTP, SOCKS5, MTProto, Outline.</div>
-        <p id="main-text-title"style="z-index: 1;">Интернет, каким он и <br> должен быть</p>
+            Учебный концепт интерфейса VPN-сервиса. Посмотрите адаптивную главную страницу, демонстрационные тарифы и интерактивный FAQ.</div>
+        <p id="main-text-title" style="z-index: 1;">Интернет, каким он и <br> должен быть</p>
         <div class="main-extension-online" style="z-index: 1;">
             <div class="lightbulb"></div>
             <p>Запустили расширение</p>
@@ -83,33 +79,33 @@
         </div>
     </div>
     <div id="information-about-us" class="slide">
-        <div id="about-us" style="position: absolute; top: 260vh;"></div>
+        <span id="about-us" class="section-anchor" aria-hidden="true"></span>
         <div class="information-block-phone">
             <div class="about-us-block-phone"></div>
         </div>
         <div class="information-block-text">
             <p class="about-us-title">
-                Разрабатываем <br> 
+                Разрабатываем <br>
                 лучший сервис <br>
                 — и вот почему
             </p>
             <p class="about-us-text">
-                Мы используем сервис в повседневной работе, ведь только так можно выявить ошибки и найти идеи для улучшений.
+                Stealthsurf VPN — учебный концепт сайта. В этой версии нет VPN-соединения, серверов или выдачи конфигураций.
             </p>
             <p class="about-us-text">
-                Кроме того, мы ведём Telegram-канал, создаём классную документацию и экспериментируем с нововведениями.
+                Здесь можно изучить структуру сервиса: возможности, демонстрационные тарифы и ответы на частые вопросы.
             </p>
             <ul class="about-us-list" id="list-about">
-                <li>Не логируем вашу активность в Интернете</li>
-                <li>Используем только мощные и быстрые сервера</li>
-                <li>На связи с клиентами в Telegram и в поддержке</li>
+                <li>Адаптивный интерфейс для телефонов и компьютеров</li>
+                <li>Демонстрация тарифов и ключевых функций</li>
+                <li>FAQ с честным описанием возможностей макета</li>
             </ul>
         </div>
     </div>
     <div id="smart-location" class="slide">
         <div class="smart-location-title">
             <p class="title-smart">Умная локация</p>
-            <p class="title-smart-smoll">Локация, на которой работают все сервисы и без рекламы</p>
+            <p class="title-smart-smoll">Идея функции для концепта: выбор удобной локации в одном месте.</p>
         </div>
         <div class="smart-location-allblock">
             <div class="smart-location-lentablock">
@@ -119,11 +115,9 @@
                         <div class="smart-location-icon-fon"></div>
                     </div>
                     <div class="smart-location-block-information">
-                        <div class="smart-location-information-title">Без ограничений</div>
+                        <div class="smart-location-information-title">Несколько устройств</div>
                         <div class="smart-location-information">
-                            Подключайтесь с любого количества устройств <br>
-                            без ограничений по скорости — весь интернет- <br>
-                            канал только ваш.
+                            В концепте показан сценарий подключения к сервису с разных устройств. Реальное подключение не настроено.
                         </div>
                     </div>
                 </div>
@@ -133,11 +127,9 @@
                         <div class="smart-location-icon-fon"></div>
                     </div>
                     <div class="smart-location-block-information">
-                        <div class="smart-location-information-title">Без смены стран</div>
+                        <div class="smart-location-information-title">Удобная локация</div>
                         <div class="smart-location-information">
-                            Вам не придётся менять страну: доступ к <br>
-                            ChatGPT и другим сервисам работает сразу «из <br>
-                            коробки».
+                            В макете показан сценарий выбора локации. Реальные VPN-подключения не выполняются.
                         </div>
                     </div>
                 </div>
@@ -151,9 +143,7 @@
                     <div class="smart-location-block-information">
                         <div class="smart-location-information-title">Российский IP-адрес</div>
                         <div class="smart-location-information">
-                            Вероятность потерять аккаунт или получить <br>
-                            блокировку значительно ниже, если IP-адрес <br>
-                            используется только вами.
+                            Карточка показывает идею выделенного IP. Заказ и настройка сервера не подключены.
                         </div>
                     </div>
                 </div>
@@ -165,9 +155,7 @@
                     <div class="smart-location-block-information">
                         <div class="smart-location-information-title">Поддержка Outline с LTE</div>
                         <div class="smart-location-information">
-                            Протокол работает через мобильную сеть, <br>
-                            поэтому вы сможете пользоваться им <br>
-                            одновременно и на телефоне, и на компьютере.
+                            В концепте перечислены варианты платформ. Конфигурации и приложения не выдаются.
                         </div>
                     </div>
                 </div>
@@ -188,165 +176,123 @@
                 Приватные <br> сервера
             </div>
             <div class="private-servers-information">
-                <p>
-                    Получите в своё распоряжение отдельный VPN- <br>
-                    сервер с выделенным IP и полной изоляцией.
-                </p>
-                <p>
-                    Он работает только на вас, обеспечивая <br>
-                    максимальную скорость и низкий пинг.
-                </p>
-                <p>
-                    Вы сами решаете, кто может использовать <br>
-                    сервер, выдавая доступ только нужным <br>
-                    пользователям.
-                </p>
+                <p>Демонстрационный сценарий отдельного сервера с выделенным IP.</p>
+                <p>В этой версии оформление и управление серверами не реализованы.</p>
             </div>
             <div class="private-servers-button-purchase-console">
-                <div id="price" class="button-purchase-console">Приобрести в консоли <div class="arrow"></div></div>
+                <button class="button-purchase-console" type="button" data-open-demo="private">О тарифе <div class="arrow"></div></button>
             </div>
         </div>
     </div>
-    <div id="price-service" class="slide">
-        <div class="price-service-title">Стоимость сервиса</div>
-        <div class="price-service-text">У всех конфигов общий тариф — итоговая цена зависит только от выбранного срока</div>
+    <section id="price-service" class="slide pricing-section">
+        <p class="eyebrow">ДЕМОНСТРАЦИОННЫЕ ТАРИФЫ</p>
+        <h2 class="price-service-title">Стоимость сервиса</h2>
+        <p class="price-service-text">Пример тарифной сетки для концепта. Подписка и оплата не подключены.</p>
         <div class="price-service-All-block">
-            <div class="price-service-block">
-                <div class="price-block" id="left-block-price">
-                    <div class="price-price">69 ₽<p>/год</p></div>
-                    <div class="price-text">Лучшее предложение.</div>
-                    <hr class="horizantal-rule">
-                    <div class="price-question">Что включено?</div>
-                    <ul class="price-list about-us-list">
-                        <li>Свыше 15 доступных локаций</li>
-                        <li>Постоянный общий IP-адрес</li>
-                        <li>Возможность смены протокола</li>
-                        <li>Дополнительный конфиг для TV <br>(Apple TV, Tizen OS, Android TV)</li>
-                        <li>Без ограничений по скорости и <br>количеству устройств</li>
-                        <li>Поддержка Cloudflare WARP</li>
-                        <li>Блокировщик рекламных, <br>трекинговых и фишинговых сайтов </li>
-                        <li>Игровой режим (beta)</li>
-                        <li>Скорость до 2 Гбит/с</li>
-                    </ul>
-                    <div class="price-button-purchase">Приобрести</div>
-                </div>
-            </div>
-            <div id="price-card-first" class="price-service-block">
-                <div class="price-block-mark">Самый популярный тариф</div>
-                <div class="price-service-content-card">
-                    <div class="price-service-content-card-first">
-                    <div id="price-price-first" class="price-price">199 ₽<p>/год</p></div>
-                    <div class="price-text">Лучшее предложение.</div>
-                    <hr class="horizantal-rule">
-                    <div class="price-question">Что включено?</div>
-                    <ul class="price-list about-us-list">
-                        <li>Свыше 15 доступных локаций</li>
-                        <li>Постоянный общий IP-адрес</li>
-                        <li>Возможность смены протокола</li>
-                        <li>Дополнительный конфиг для TV <br>(Apple TV, Tizen OS, Android TV)</li>
-                        <li>Без ограничений по скорости и <br>количеству устройств</li>
-                        <li>Поддержка Cloudflare WARP</li>
-                        <li>Блокировщик рекламных, <br>трекинговых и фишинговых сайтов </li>
-                        <li>Игровой режим (beta)</li>
-                        <li>Скорость до 2 Гбит/с</li>
-                    </ul>
-                    <div id="price-button-first" class="price-button-purchase">Приобрести</div>
-                    </div>
-                </div>
-            </div>
-            <div class="price-service-block">
+            <article class="price-service-block plan-card">
                 <div class="price-block">
-                    <div class="price-price">1790 ₽<p>/год</p></div>
-                    <div class="price-text">Лучшее предложение.</div>
+                    <h3 class="plan-name">Старт</h3>
+                    <p class="price-price">69 ₽<span>/год</span></p>
+                    <p class="price-text">Пример цены для концепта</p>
                     <hr class="horizantal-rule">
-                    <div class="price-question">Что включено?</div>
+                    <p class="price-question">В макете показано</p>
                     <ul class="price-list about-us-list">
-                        <li>Свыше 15 доступных локаций</li>
-                        <li>Постоянный общий IP-адрес</li>
-                        <li>Возможность смены протокола</li>
-                        <li>Дополнительный конфиг для TV <br>(Apple TV, Tizen OS, Android TV)</li>
-                        <li>Без ограничений по скорости и <br>количеству устройств</li>
-                        <li>Поддержка Cloudflare WARP</li>
-                        <li>Блокировщик рекламных, <br>трекинговых и фишинговых сайтов </li>
-                        <li>Игровой режим (beta)</li>
-                        <li>Скорость до 2 Гбит/с</li>
+                        <li>Базовый VPN-профиль</li>
+                        <li>Общий IP-адрес</li>
+                        <li>Выбор протокола</li>
                     </ul>
-                    <div class="price-button-purchase">Приобрести</div>
+                    <button class="price-button-purchase" type="button" data-plan="Старт">Посмотреть</button>
                 </div>
-            </div>
+            </article>
+            <article class="price-service-block plan-card plan-card-featured">
+                <div class="price-block-mark">Популярный сценарий</div>
+                <div class="price-block">
+                    <h3 class="plan-name">Плюс</h3>
+                    <p class="price-price">199 ₽<span>/год</span></p>
+                    <p class="price-text">Пример цены для концепта</p>
+                    <hr class="horizantal-rule">
+                    <p class="price-question">В макете показано</p>
+                    <ul class="price-list about-us-list">
+                        <li>Несколько устройств</li>
+                        <li>Умная локация</li>
+                        <li>Фильтрация рекламы</li>
+                        <li>Игровой режим — beta</li>
+                    </ul>
+                    <button class="price-button-purchase" type="button" data-plan="Плюс">Посмотреть</button>
+                </div>
+            </article>
+            <article class="price-service-block plan-card">
+                <div class="price-block">
+                    <h3 class="plan-name">Приватный</h3>
+                    <p class="price-price">1 790 ₽<span>/год</span></p>
+                    <p class="price-text">Пример цены для концепта</p>
+                    <hr class="horizantal-rule">
+                    <p class="price-question">В макете показано</p>
+                    <ul class="price-list about-us-list">
+                        <li>Отдельный сервер</li>
+                        <li>Выделенный IP</li>
+                        <li>Управление доступом</li>
+                    </ul>
+                    <button class="price-button-purchase" type="button" data-plan="Приватный">Посмотреть</button>
+                </div>
+            </article>
         </div>
-    </div>
-    <div id="question-answer" class="slide">
+        <p class="pricing-disclaimer">Цены и функции — демонстрационные. Не вводите платёжные или личные данные: сайт ничего не продаёт.</p>
+    </section>
+    <section id="question-answer" class="slide faq-section">
         <div class="question-answer-block-box">
             <div class="question-answer-box">
-                <div class="question-answer-box-icon"></div>
-                <div class="question-answer-box-button">FAQs</div>
-                <div class="question-answer-box-title">Вопрос-ответ</div>
-                <div class="question-answer-box-text">Самые популярные вопросы и ответы на них.</div>
+                <div class="question-answer-box-icon" aria-hidden="true"></div>
+                <span class="question-answer-box-button">FAQ</span>
+                <h2 class="question-answer-box-title">Вопросы и ответы</h2>
+                <p class="question-answer-box-text">Коротко о том, что умеет эта демо-версия.</p>
             </div>
         </div>
         <div class="question-answer-block-list-question">
-            <div class="question-answer-container">
-                <div class="question-header">1. Как это работает?</div>
-                <div class="answer-wrapper">
-                    <div class="answer-content">
-                    Вы получаете конфиг — файл с настройками, который позволяет вашему устройству подключаться к VPN-серверу через выбранный протокол. Он содержит все необходимые параметры для обеспечения безопасного и анонимного соединения.
-                </div>
-                </div>
-            </div>
-            <div class="question-answer-container">
-                <div class="question-header">2. 1 конфиг на 1 устройство?</div>
-                <div class="answer-wrapper">
-                    <div class="answer-content">
-                    Конфиг может работать на всех ваших устройствах одновременно.
-                </div>
-                </div>
-            </div>
-            <div class="question-answer-container">
-                <div class="question-header">3. Какая скорость у VPN?</div>
-                <div class="answer-wrapper">
-                    <div class="answer-content">
-                    На всех локациях, за исключением помеченных как “Низкая скорость”, конфигурация обеспечивает пропускную способность до 2 Гбит/с.
-                </div>
-                </div>
-            </div>
-            <div class="question-answer-container">
-                <div class="question-header">4. Безопасен ли сервис?</div>
-                <div class="answer-wrapper">
-                    <div class="answer-content">
-                    Абсолютно! Мы не сохраняем ваши IP-адреса, геолокацию, историю посещений и другие личные данные. Всё, что мы знаем о вас, — это электронная почта, но и она шифруется в несколько этапов перед сохранением в базе данных.
-                </div>
-                </div>
-            </div>
-            <div class="question-answer-container">
-                <div class="question-header">5. Поддерживаете роутеры?</div>
-                <div class="answer-wrapper">
-                    <div class="answer-content">
-                    Вы можете настроить VPN на роутерах Keenetic, используя прокотол VLESS. Соответствующие инструкции можно найти в документации.
-                </div>
-                </div>
-            </div>
-            <div class="question-answer-container">
-                <div class="question-header">6. Есть ли возврат средств?</div>
-                <div class="answer-wrapper">
-                    <div class="answer-content">
-                    Возврат средств за купленный ключ осуществляется только в случае, если он оказался неисправным или нерабочим. Пожалуйста, свяжитесь с поддержкой для решения этого вопроса.
-                </div>
-                </div>
-            </div>
+            <article class="question-answer-container">
+                <button class="question-header" type="button" aria-expanded="false" aria-controls="answer-1">Как получить VPN-конфигурацию?</button>
+                <div class="answer-wrapper" id="answer-1"><div class="answer-content">Никак: это учебный сайт без VPN-сервера и выдачи конфигураций. Кнопки показывают интерфейсный сценарий.</div></div>
+            </article>
+            <article class="question-answer-container">
+                <button class="question-header" type="button" aria-expanded="false" aria-controls="answer-2">Можно ли оформить подписку?</button>
+                <div class="answer-wrapper" id="answer-2"><div class="answer-content">Нет. Тарифы и цены — примеры для макета; платёжная система и аккаунты не подключены.</div></div>
+            </article>
+            <article class="question-answer-container">
+                <button class="question-header" type="button" aria-expanded="false" aria-controls="answer-3">Какая здесь скорость соединения?</button>
+                <div class="answer-wrapper" id="answer-3"><div class="answer-content">Сайт не устанавливает соединение, поэтому скорость не измеряется. Указанные в исходной концепции значения не являются обещанием работающего сервиса.</div></div>
+            </article>
+            <article class="question-answer-container">
+                <button class="question-header" type="button" aria-expanded="false" aria-controls="answer-4">Как обрабатываются мои данные?</button>
+                <div class="answer-wrapper" id="answer-4"><div class="answer-content">Не отправляйте сюда персональные данные. У демо нет формы регистрации, аналитики аккаунта или серверной части VPN.</div></div>
+            </article>
+            <article class="question-answer-container">
+                <button class="question-header" type="button" aria-expanded="false" aria-controls="answer-5">Работает ли сервис на телефоне и компьютере?</button>
+                <div class="answer-wrapper" id="answer-5"><div class="answer-content">Сам макет адаптирован под разные размеры экрана. VPN-клиент и приложения для устройств в проект не входят.</div></div>
+            </article>
+            <article class="question-answer-container">
+                <button class="question-header" type="button" aria-expanded="false" aria-controls="answer-6">Куда обратиться за поддержкой?</button>
+                <div class="answer-wrapper" id="answer-6"><div class="answer-content">Поддержка не подключена, это портфолио-проект. Рабочие контакты появятся, если у сервиса будет настоящий владелец и канал поддержки.</div></div>
+            </article>
         </div>
-    </div>
+    </section>
 </main>
 <footer>
-    <div class="footer-hight">Annders VPN</div>
+    <div class="footer-hight">Stealthsurf VPN</div>
     <hr id="footer-horizantal-rule">
     <div class="footer-lower">
         <p>
-           Это учебная копия сайта для демонстрации навыков верстки
+           Учебный концепт для портфолио. Это не работающий VPN-сервис.
         </p>
     </div>
 </footer>
-<div class="setka"></div>
-<script src="main.js"></script>
+<dialog class="demo-dialog" id="demo-dialog" aria-labelledby="demo-dialog-title">
+    <form method="dialog" class="demo-dialog-close-row"><button class="demo-dialog-close" aria-label="Закрыть окно">×</button></form>
+    <span class="demo-dialog-kicker">УЧЕБНЫЙ ПРОЕКТ</span>
+    <h2 id="demo-dialog-title">Эта функция пока не подключена</h2>
+    <p id="demo-dialog-message">На странице показан интерфейсный сценарий без реального VPN-сервиса.</p>
+    <button class="demo-dialog-action" id="demo-dialog-action" type="button">Посмотреть тарифы</button>
+</dialog>
+<div class="setka" aria-hidden="true"></div>
+<script src="main.js" defer></script>
 </body>
 </html>

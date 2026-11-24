@@ -1,39 +1,37 @@
-# Stealthsurf VPN — лендинг сервиса
+# Stealthsurf VPN — адаптивный концепт лендинга
 
-Концепт лендинга VPN-сервиса. Проект показывает работу с длинной посадочной страницей, визуальными блоками, тарифами и адаптивной версткой.
+Учебный интерфейс VPN-сервиса на HTML, CSS и JavaScript. Проект показывает структуру длинной посадочной страницы, адаптивную сетку и интерактивные элементы.
 
 **Демо:** https://ilyaanderson.github.io/Stealthsurf-VPN/
 
-## Что реализовано
+## Возможности
 
-- Страница с описанием сервиса, преимуществами и тарифными блоками
-- FAQ с раскрывающимися ответами
-- Адаптивные стили для планшетов и телефонов
-- Анимации и тема оформления с учетом системной цветовой темы
-- HTML, CSS и небольшой JavaScript для интерактивности
+- Адаптивные секции для телефона, планшета и широкого экрана.
+- Демонстрационные тарифы с разным набором функций.
+- Доступный FAQ-аккордеон с управлением клавиатурой.
+- Диалоги для сценариев тарифа, консоли и конфигурации.
+- Учитывается системная настройка уменьшения анимации.
+
+Это только фронтенд-макет: VPN-соединения, серверов, аккаунтов, выдачи конфигураций и оплаты нет. Указанные тарифы и цены — примеры.
 
 ## Запуск
 
-Откройте `index.html` в браузере или запустите локальный сервер из корня проекта:
+Откройте `index.html` или запустите из корня проекта:
 
 ```bash
 python3 -m http.server 8000
 ```
 
-Затем перейдите на http://localhost:8000.
-
-> Это демонстрационный интерфейс. Подключение к VPN и обработка платежей в проекте не реализованы.
+Перейдите на http://localhost:8000.
 
 ---
 
-# Stealthsurf VPN — service landing page
+# Stealthsurf VPN — responsive landing page concept
 
-A landing page concept for a VPN service, built to demonstrate long-form page layout, pricing sections, and responsive styling.
+A responsive VPN service interface concept built with HTML, CSS, and vanilla JavaScript. It includes feature sections, sample pricing, a keyboard-accessible FAQ accordion, and demo dialogs.
 
 **Live demo:** https://ilyaanderson.github.io/Stealthsurf-VPN/
 
-The page includes service and pricing sections, an FAQ accordion, tablet and mobile breakpoints, CSS animation, and system color-scheme support. It uses HTML, CSS, and a small amount of JavaScript.
+No VPN backend, servers, accounts, configuration delivery, or payments are connected. Prices are examples for the portfolio mockup.
 
-Run it locally with `python3 -m http.server 8000` from the project root, then open http://localhost:8000.
-
-> This is a front-end demo. VPN connectivity and payment processing are not implemented.
+Run `python3 -m http.server 8000` from the project root and open http://localhost:8000.

@@ -1,0 +1,147 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  min-width: 320px;
+  min-height: 100vh;
+  height: auto;
+  overflow-x: clip;
+}
+
+@media (max-width: 768px) {
+  #smart-location,
+  #private-servers,
+  #question-answer,
+  #main-iPad,
+  .private-servers-block,
+  .information-block-text {
+    height: auto;
+    min-height: 0;
+  }
+
+  #smart-location,
+  #private-servers,
+  #question-answer {
+    width: 100%;
+    margin-top: 32px;
+    padding: 24px 18px;
+  }
+
+  .question-answer-block-box,
+  .question-answer-block-list-question {
+    width: min(100%, 560px);
+    height: auto;
+    min-height: 0;
+    padding: 0;
+  }
+
+  .question-answer-container {
+    width: 100%;
+    padding: 16px 18px;
+  }
+
+  #main-text-title {
+    font-size: clamp(32px, 8vw, 54px);
+    line-height: 1.05;
+  }
+
+  .main-text-information {
+    font-size: clamp(14px, 3.8vw, 18px);
+    line-height: 1.5;
+  }
+
+  .iPad {
+    width: min(100%, 760px);
+    height: auto;
+    min-height: 420px;
+  }
+
+  .about-us-block-phone,
+  .private-servers-phone {
+    max-width: 100%;
+  }
+
+  .footer-hight {
+    padding: 20px;
+    font-size: clamp(24px, 6vw, 40px);
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    min-width: 0;
+    padding-left: 14px;
+    font-size: 16px;
+  }
+
+  #menu {
+    font-size: 11px;
+  }
+
+  .button,
+  .button-purchase-console,
+  .price-button-purchase {
+    min-height: 40px;
+    max-width: 100%;
+    padding-inline: 14px;
+    font-size: 12px;
+  }
+
+  .price-service-title {
+    font-size: clamp(25px, 7vw, 35px);
+    text-align: center;
+  }
+
+  .price-service-text {
+    max-width: 100%;
+    padding-inline: 10px;
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .price-service-All-block,
+  .price-service-block,
+  .price-block {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .question-header {
+    gap: 10px;
+    font-size: 16px;
+  }
+
+  .question-answer-block-box {
+    min-height: 180px;
+  }
+
+  .question-answer-box-title,
+  .question-answer-box-text {
+    max-width: 100%;
+    padding-inline: 10px;
+    text-align: center;
+  }
+
+  .private-servers-title,
+  .about-us-title {
+    max-width: 100%;
+    font-size: clamp(25px, 7vw, 34px);
+    text-align: center;
+  }
+
+  .private-servers-block-phone,
+  .about-us-block-phone {
+    width: min(100%, 400px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

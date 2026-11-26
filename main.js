@@ -7,10 +7,12 @@ faqItems.forEach((item) => {
     faqItems.forEach((candidate) => {
       candidate.classList.remove("clicked");
       candidate.querySelector(".question-header")?.setAttribute("aria-expanded", "false");
+      candidate.querySelector(".answer-wrapper").setAttribute("aria-hidden", "true");
     });
     if (!wasOpen) {
       item.classList.add("clicked");
       trigger.setAttribute("aria-expanded", "true");
+      item.querySelector(".answer-wrapper").setAttribute("aria-hidden", "false");
     }
   });
 });
@@ -36,7 +38,11 @@ document.querySelectorAll("[data-open-demo], [data-plan]").forEach((button) => {
 
 document.querySelector("#demo-dialog-action")?.addEventListener("click", () => {
   demoDialog.close();
-  document.querySelector("#price-service")?.scrollIntoView({ behavior: "smooth", block: "start" });
+  if (location.hash === "#price-service") {
+    document.querySelector("#price-service")?.scrollIntoView({ block: "start" });
+  } else {
+    location.hash = "price-service";
+  }
 });
 
 demoDialog?.addEventListener("click", (event) => {

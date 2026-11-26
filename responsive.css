@@ -179,3 +179,70 @@ footer { width: 100%; height: auto; min-height: 0; margin: 0; padding: 30px var(
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
 }
+
+/* Keep the original page structure and simplify the surrounding chrome. */
+body, header { animation: none; }
+header { border-block-end: 1px solid rgb(120 128 154 / 20%); }
+.setka { height: 100%; opacity: .12; mask-image: linear-gradient(#000, transparent 80%); }
+#main { min-height: clamp(460px, 75svh, 740px); }
+#main-text-title { font-family: system-ui, sans-serif; font-weight: 710; }
+.main-text-information { max-width: 44ch; color: var(--color-question-list); font-family: system-ui, sans-serif; font-weight: 400; }
+#main-iPad { padding-block: clamp(28px, 4vw, 64px); }
+.iPad { width: min(90%, 1200px); height: auto; aspect-ratio: 3511 / 2478; min-height: 0; padding: 0; background: none; }
+.iPad::before { content: none; }
+.card-content { background-color: transparent; }
+.arrow {
+    position: relative;
+    flex: 0 0 14px;
+    width: 14px;
+    height: 14px;
+    display: grid;
+    place-items: center;
+    background: none;
+    transition: transform .2s ease;
+}
+.arrow::before, .arrow::after { position: absolute; content: ""; }
+.arrow::before { width: 12px; border-top: 1.5px solid; }
+.arrow::after { right: 2px; width: 6px; height: 6px; border-top: 1.5px solid; border-right: 1.5px solid; transform: rotate(45deg); }
+.button:hover .arrow, .button-purchase-console:hover .arrow { transform: translateX(3px); }
+.about-us-block-phone, .private-servers-phone {
+    -webkit-mask-image: linear-gradient(#000 0 76%, transparent 100%);
+    mask-image: linear-gradient(#000 0 76%, transparent 100%);
+}
+.about-us-block-phone::before, .private-servers-phone::before { content: none; }
+.hardware-mark { align-self: center; justify-self: center; width: 100%; height: auto; }
+.private-servers-button-purchase-console { display: flex; align-items: center; flex-wrap: wrap; gap: 12px 18px; }
+.plain-link { color: var(--main-color-text-lighter); font: 600 14px/1.4 system-ui, sans-serif; text-decoration: underline; text-underline-offset: 4px; }
+.server-jump { display: inline-flex; align-items: center; gap: 5px; }
+.server-jump img { flex: 0 0 42px; width: 42px; height: auto; }
+.price-block { min-height: 0; }
+.price-button-purchase { border: 1px solid currentColor; }
+.plan-card-featured { padding-top: 0; }
+.plan-card-featured .price-block { border-color: var(--main-color-electro-blue); }
+.question-answer-box { background: transparent; padding-inline: 0; }
+.question-answer-container { transition: background-color .2s ease; }
+.question-answer-container.clicked {
+    padding-bottom: 0;
+    border-radius: 9px;
+    background: var(--main-color-black-gray);
+}
+.question-answer-container.clicked .question-header { color: var(--main-color-text-lighter); }
+.question-header { gap: 12px; }
+.question-header::after {
+    content: "";
+    flex: 0 0 8px;
+    height: 8px;
+    border-right: 1.5px solid;
+    border-bottom: 1.5px solid;
+    transform: rotate(45deg);
+    transition: transform .2s ease;
+}
+.question-header[aria-expanded="true"]::after { transform: rotate(225deg); }
+.answer-content { min-height: 0; user-select: text; }
+@media (max-width: 700px) {
+    #main { min-height: min(670px, 79svh); }
+    .iPad { width: 94%; }
+}
+@media (max-width: 340px) {
+    #button-price { display: none; }
+}

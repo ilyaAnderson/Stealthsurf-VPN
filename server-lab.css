@@ -1,0 +1,160 @@
+.server-lab {
+    --server-ink: #f2f5fc;
+    --server-muted: #bdc6d9;
+    --server-line: #354053;
+    --server-blue: #85bbff;
+    --server-header: 84px;
+    padding: clamp(52px, 7vw, 104px) var(--page-gutter);
+    border-block: 1px solid #7d8ba34d;
+    background: #111722;
+    color: var(--server-ink);
+    font-family: system-ui, sans-serif;
+}
+
+.server-intro, .server-story { max-inline-size: 1320px; margin-inline: auto; }
+.server-intro { margin-block-end: clamp(20px, 4vw, 48px); }
+.server-intro h2 {
+    margin: 0;
+    font-size: clamp(30px, 5vw, 66px);
+    font-weight: 620;
+    line-height: 1.04;
+    letter-spacing: -.045em;
+}
+.server-intro p { margin: 12px 0 0; color: var(--server-muted); font-size: clamp(14px, 1.55vw, 18px); }
+
+.server-pin {
+    display: grid;
+    grid-template-columns: minmax(0, .8fr) minmax(0, 1.65fr);
+    grid-template-areas: "copy scene";
+    align-items: stretch;
+    min-inline-size: 0;
+    border: 1px solid var(--server-line);
+    border-radius: 20px;
+    background: #171e2b;
+    overflow: clip;
+}
+
+.server-viewport {
+    grid-area: scene;
+    isolation: isolate;
+    position: relative;
+    min-inline-size: 0;
+    min-block-size: 440px;
+    margin: 0;
+    overflow: hidden;
+    background: radial-gradient(ellipse at 54% 39%, #2c394d, #151b27 74%);
+    border-inline-start: 1px solid var(--server-line);
+}
+.server-viewport::before {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    content: "";
+    background: radial-gradient(circle, #adbbd54d 1px, transparent 1.2px) 0 0 / 24px 24px;
+    mask-image: radial-gradient(ellipse at center, transparent 35%, #000);
+    opacity: .5;
+}
+.server-poster, .server-viewport canvas {
+    position: absolute;
+    inset: 0;
+    display: block;
+    inline-size: 100%;
+    block-size: 100%;
+}
+.server-poster { object-fit: contain; }
+.server-lab.is-ready .server-poster { visibility: hidden; }
+.server-lab [hidden] { display: none !important; }
+
+.server-panel { grid-area: copy; padding: clamp(16px, 2.2vw, 32px); min-inline-size: 0; }
+.server-panel h3 { margin: 0 0 10px; font-size: clamp(20px, 2.4vw, 34px); font-weight: 630; line-height: 1.08; letter-spacing: -.035em; }
+.server-chapter + .server-chapter { margin-block-start: 24px; }
+.server-chapter p, .server-part-notes dd, .server-route {
+    margin: 0;
+    color: var(--server-muted);
+    font-size: clamp(13px, 1.15vw, 15px);
+    line-height: 1.5;
+}
+.server-controls, .server-parts { display: flex; flex-wrap: wrap; gap: 5px; }
+.server-controls button, .server-parts button {
+    min-height: 38px;
+    padding: 5px 9px;
+    border: 1px solid var(--server-line);
+    border-radius: 7px;
+    background: transparent;
+    color: var(--server-muted);
+    font: 600 12px/1.2 system-ui, sans-serif;
+    text-align: center;
+    touch-action: manipulation;
+    cursor: pointer;
+}
+.server-controls button { flex: 1 1 0; }
+.server-controls button:hover, .server-parts button:hover { background: #2a3549; color: var(--server-ink); }
+.server-controls button[aria-pressed="true"], .server-parts button[aria-pressed="true"] {
+    border-color: #75a3de;
+    background: #223650;
+    color: #e5f1ff;
+}
+.server-progress { height: 2px; margin: 12px 0 22px; background: var(--server-line); }
+.server-progress span { display: block; height: 100%; transform: scaleX(0); transform-origin: left; background: var(--server-blue); }
+.server-specs { margin: 14px 0 0; }
+.server-specs > div { display: flex; flex-wrap: wrap; justify-content: space-between; column-gap: 8px; padding-block: 7px; border-block-end: 1px solid var(--server-line); }
+.server-specs dt, .server-specs dd { margin: 0; font-size: 12px; }
+.server-specs dt { color: var(--server-muted); }
+.server-specs dd { font-weight: 650; font-variant-numeric: tabular-nums; }
+.server-part-notes { margin: 14px 0 0; }
+.server-part-notes > div + div { margin-block-start: 10px; }
+.server-part-notes dt { margin-block-end: 4px; font-size: 14px; font-weight: 650; }
+.server-lab:not(.is-ready) .server-parts { display: none; }
+.server-lab.is-ready .server-chapter + .server-chapter { margin-block-start: 0; }
+.server-lab.is-ready .server-part-notes > div { margin-block-start: 0; }
+.server-route { padding-inline-start: 1.2rem; }
+.server-route li + li { margin-block-start: 8px; }
+.server-route li::marker { color: var(--server-blue); }
+.server-note { margin: 14px 0 0; color: var(--server-muted); font-size: 11px; line-height: 1.4; }
+.server-marker {
+    position: absolute;
+    z-index: 2;
+    inline-size: 19px;
+    block-size: 19px;
+    transform: translate(-50%, -50%);
+    border: 1px solid #e1efff;
+    border-radius: 50%;
+    background: #578de34a;
+    box-shadow: 0 0 0 3px #13233e88;
+    pointer-events: none;
+}
+.server-route-labels {
+    position: absolute;
+    inset: auto 12px 15px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    color: #d9e5f7;
+    font: 550 11px/1.2 system-ui, sans-serif;
+    pointer-events: none;
+}
+.server-route-labels span { padding: 4px 7px; border: 1px solid var(--server-line); border-radius: 5px; background: #171e2b; text-align: center; }
+
+.server-lab.is-pinned .server-story { block-size: calc(var(--server-frame) + 218svh); }
+.server-lab.is-pinned .server-pin { position: sticky; top: var(--server-header); }
+.server-lab { --server-frame: min(660px, max(440px, calc(100svh - 108px))); }
+.server-lab.is-ready .server-viewport { min-block-size: var(--server-frame); }
+
+@media (max-width: 850px) {
+    .server-lab { --server-header: 72px; --server-frame: clamp(168px, 33svh, 324px); }
+    .server-pin { grid-template-columns: minmax(0, 1fr); grid-template-areas: "scene" "copy"; border-radius: 16px; }
+    .server-viewport { min-block-size: var(--server-frame); border-inline-start: 0; border-block-end: 1px solid var(--server-line); }
+    .server-panel { padding: 12px 16px 16px; }
+    .server-progress { margin-block: 8px 12px; }
+    .server-chapter h3 { margin-block-end: 7px; }
+    .server-specs { margin-block-start: 7px; }
+    .server-specs > div { padding-block: 4px; }
+    .server-note { margin-block-start: 8px; }
+    .server-lab.is-ready .server-chapters { min-block-size: 184px; }
+    .server-lab.is-pinned .server-story { block-size: calc(var(--server-frame) + 250px + 188svh); }
+}
+
+@media (max-width: 360px) {
+    .server-panel { padding-inline: 10px; }
+    .server-controls button, .server-parts button { padding-inline: 6px; }
+}

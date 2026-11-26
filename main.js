@@ -1,44 +1,46 @@
-const faqItems = [...document.querySelectorAll(".question-answer-container")];
+const profileOptions = document.querySelector("#profile-options");
+const profileLocation = document.querySelector("#profile-location");
+const profileProtocol = document.querySelector("#profile-protocol");
 
-faqItems.forEach((item) => {
-  const trigger = item.querySelector(".question-header");
-  trigger?.addEventListener("click", () => {
-    const wasOpen = trigger.getAttribute("aria-expanded") === "true";
-    faqItems.forEach((candidate) => {
-      candidate.classList.remove("clicked");
-      candidate.querySelector(".question-header")?.setAttribute("aria-expanded", "false");
-    });
-    if (!wasOpen) {
-      item.classList.add("clicked");
-      trigger.setAttribute("aria-expanded", "true");
-    }
-  });
-});
+function updateProfile() {
+  const options = new FormData(profileOptions);
+  profileLocation.textContent = options.get("location");
+  profileProtocol.textContent = options.get("protocol");
+}
+
+profileOptions.addEventListener("change", updateProfile);
+window.addEventListener("pageshow", updateProfile);
 
 const demoDialog = document.querySelector("#demo-dialog");
+const dialogTitle = document.querySelector("#demo-dialog-title");
+const dialogMessage = document.querySelector("#demo-dialog-message");
+const dialogAction = document.querySelector("#demo-dialog-action");
 const demoTitles = {
-  console: ["Консоль не подключена", "В этой версии нет аккаунтов и рабочего личного кабинета. Это интерактивный макет для портфолио."],
-  config: ["VPN-конфигурации не выдаются", "Для выдачи конфигураций нужен VPN-сервер. Здесь демонстрируется только интерфейс сайта."],
-  private: ["Приватный сервер — сценарий макета", "Оформление тарифа и управление сервером не реализованы. Указанные цены служат примером."],
+  console: ["Личный кабинет", "На главной можно посмотреть интерфейс кабинета. Вход и регистрация недоступны."],
+  config: ["VPN-конфигурация", "Выбор локации и протокола меняет карточку профиля. Выдача файлов конфигурации недоступна."],
+  private: ["Приватный сервер", "В тарифе предусмотрены отдельный сервер и выделенный IP. Серверы в демо не выдаются."],
 };
 
 document.querySelectorAll("[data-open-demo], [data-plan]").forEach((button) => {
   button.addEventListener("click", () => {
     const plan = button.dataset.plan;
     const [title, message] = plan
-      ? [`Тариф «${plan}» не продаётся`, "Тариф и цена приведены как пример. Покупка, подписка и сбор данных на сайте отключены."]
-      : (demoTitles[button.dataset.openDemo] || demoTitles.console);
-    document.querySelector("#demo-dialog-title").textContent = title;
-    document.querySelector("#demo-dialog-message").textContent = message;
+      ? [`Тариф «${plan}»`, "Цена и функции приведены для примера. Оформление подписки недоступно."]
+      : demoTitles[button.dataset.openDemo];
+
+    dialogTitle.textContent = title;
+    dialogMessage.textContent = message;
+    dialogAction.hidden = Boolean(plan);
     demoDialog.showModal();
   });
 });
 
-document.querySelector("#demo-dialog-action")?.addEventListener("click", () => {
+dialogAction.addEventListener("click", () => {
   demoDialog.close();
-  document.querySelector("#price-service")?.scrollIntoView({ behavior: "smooth", block: "start" });
+  document.querySelector("#price-title").focus({ preventScroll: true });
+  document.querySelector("#price-service").scrollIntoView();
 });
 
-demoDialog?.addEventListener("click", (event) => {
+demoDialog.addEventListener("click", (event) => {
   if (event.target === demoDialog) demoDialog.close();
 });

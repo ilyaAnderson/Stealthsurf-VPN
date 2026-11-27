@@ -1,45 +1,28 @@
-:root {
-  color-scheme: light;
-  --main-color-black-gray: rgb(255 255 255);
-  --main-color-back: rgb(211 213 231);
-  --main-color-back-lighter: rgb(189 217 255);
-  --main-color-electro-blue: rgb(75 162 255);
-  --main-color-text-blue: rgb(50 147 251);
-  --button-mark-price-color: rgb(20 20 27);
-  --color-question-list: rgb(62 63 75);
-  --button-mark-price-color-lighter: whitesmoke;
-  --main-color-text-black-blue: rgb(23 24 34);
-  --main-color-text-lighter: rgb(16 19 31);
-  --main-color-setka: #676e8f;
-  --color-online-gray: rgba(62, 62, 62, .8);
-  --color-shadow-online: rgba(112, 134, 255, .38);
-  --color-back-online: whitesmoke;
-  --color-border-online: rgba(120, 138, 255, .2);
-  --color-button-news: rgb(255 255 255);
-  --color-button-news-dark: rgb(157 157 157 / 0%);
-  --icon-question-answer: url("Photo/wElrZEY5NbOHjV30YrOWyP9vH0white.svg");
+@font-face {
+    font-family: Manrope;
+    src: url("fonts/manrope.woff2") format("woff2");
+    font-weight: 200 800;
+    font-display: swap;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    color-scheme: dark;
-    --main-color-black-gray: rgb(26 26 30);
-    --main-color-back: rgb(8 8 16);
-    --main-color-back-lighter: rgb(16 19 30);
-    --main-color-electro-blue: rgb(75 162 255);
-    --main-color-text-blue: rgb(100 176 255);
-    --button-mark-price-color: whitesmoke;
-    --color-question-list: rgb(220 220 225);
-    --button-mark-price-color-lighter: rgb(17 17 26);
-    --main-color-text-black-blue: rgb(23 24 34);
-    --main-color-text-lighter: whitesmoke;
-    --main-color-setka: #333333;
-    --color-online-gray: rgb(205 205 205 / 85%);
-    --color-shadow-online: rgba(148, 198, 255, .25);
-    --color-back-online: #0c0b15;
-    --color-border-online: rgba(215, 244, 255, .2);
-    --color-button-news: rgb(31 30 36);
-    --color-button-news-dark: #0c0b1500;
-    --icon-question-answer: url("Photo/wElrZEY5NbOHjV30YrOWyP9vH0.svg");
-  }
+@font-face {
+    font-family: Literata;
+    src: url("fonts/literata-display-italic.woff2") format("woff2");
+    font-style: italic;
+    font-weight: 450;
+    font-display: swap;
+}
+:root {
+    color-scheme: light;
+    --paper: #f8f8f3;
+    --ink: #172024;
+    --muted: #505e66;
+    --line: #cbd2d2;
+    --blue: #224ce0;
+    --steel: #e2e9ee;
+    --page-gutter: clamp(20px, 5.5vw, 88px);
+    --header-height: 68px;
+    --wrap: 1440px;
+    --sans: Manrope, Arial, sans-serif;
+    --serif: Literata, Georgia, serif;
+    --mono: ui-monospace, "Courier New", monospace;
 }

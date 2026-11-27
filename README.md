@@ -1,12 +1,13 @@
 # Stealthsurf VPN — адаптивный концепт лендинга
 
-Учебный интерфейс VPN-сервиса на HTML, CSS и JavaScript. Проект показывает структуру длинной посадочной страницы, адаптивную сетку и интерактивные элементы.
+Интерактивный гид по VPN на HTML, CSS, JavaScript и Three.js. Страница показывает путь пакета от телефона до сервера.
 
 **Демо:** https://ilyaanderson.github.io/Stealthsurf-VPN/
 
 ## Возможности
 
-- Адаптивные секции для телефона, планшета и широкого экрана.
+- 3D-сцены с разъёмом RJ45, смартфоном, роутером и разборным стоечным сервером.
+- Виджет VPN меняет состояние при прокрутке и по кнопкам. Для браузеров без WebGL предусмотрены статичные изображения моделей.
 - Демонстрационные тарифы с разным набором функций.
 - Доступный FAQ-аккордеон с управлением клавиатурой.
 - Диалоги для сценариев тарифа, консоли и конфигурации.
@@ -16,7 +17,7 @@
 
 ## Запуск
 
-Откройте `index.html` или запустите из корня проекта:
+Запустите из корня проекта:
 
 ```bash
 python3 -m http.server 8000
@@ -28,7 +29,7 @@ python3 -m http.server 8000
 
 # Stealthsurf VPN — responsive landing page concept
 
-A responsive VPN service interface concept built with HTML, CSS, and vanilla JavaScript. It includes feature sections, sample pricing, a keyboard-accessible FAQ accordion, and demo dialogs.
+An interactive VPN guide built with HTML, CSS, JavaScript, and Three.js. Scroll through a connection demo and explore the Ethernet connector, home router, and server teardown. Image fallbacks are provided for browsers without WebGL.
 
 **Live demo:** https://ilyaanderson.github.io/Stealthsurf-VPN/
 

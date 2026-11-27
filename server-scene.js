@@ -73,7 +73,10 @@ function makeRoute(scene) {
 }
 
 export function makeServerScene(viewport) {
-    const renderer = new T.WebGLRenderer({ alpha: true, antialias: true, powerPreference: "low-power" });
+    const canvas = document.createElement("canvas");
+    const context = canvas.getContext("webgl2", { alpha: true, antialias: true, powerPreference: "low-power" });
+    if (!context) throw new Error("WebGL 2 is unavailable");
+    const renderer = new T.WebGLRenderer({ canvas, context, alpha: true, antialias: true });
     renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.65));
     renderer.setClearAlpha(0);
     renderer.toneMapping = T.ACESFilmicToneMapping;

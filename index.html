@@ -1,172 +1,83 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Учебный лендинг VPN-сервиса: возможности, тарифы, ответы на вопросы и адаптивный интерфейс.">
-    <title>Stealthsurf VPN — концепт сайта</title>
-    <link rel="stylesheet" href="animation.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#e3eaf0">
+    <meta name="description" content="Как устроено VPN-подключение. Включите виджет на телефоне, рассмотрите роутер и разберите сервер StealthSurf в 3D.">
+    <title>StealthSurf — от телефона до сервера</title>
+    <link rel="preload" href="fonts/manrope.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="variables.css">
     <link rel="stylesheet" href="css.css">
-    <link rel="stylesheet" href="responsive.css">
     <link rel="stylesheet" href="server-lab.css">
+    <link rel="stylesheet" href="responsive.css">
 </head>
 <body>
-<header>
-    <div class="container">
-        <a href="#main" aria-label="Stealthsurf VPN — наверх">
-            <p>Stealthsurf VPN</p>
-        </a>
-    </div>
-    <nav id="menu" class="container" aria-label="Разделы сайта">
-        <a id="button-about" href="#about-us">О нас</a>
-        <a id="button-price" href="#price-service">Стоимость</a>
-        <a id="button-document" href="#smart-location">Возможности</a>
-        <a id="button-server" href="#server-lab">Сервер 3D</a>
-        <a id="button-help" href="#question-answer">FAQ</a>
-    </nav>
-    <div class="container header-action-container">
-        <button class="button" type="button" data-open-demo="console">
-            <span>В консоль</span>
-            <span class="arrow" aria-hidden="true"></span>
-        </button>
+<a class="skip-link" href="#content">К содержанию</a>
+<header class="site-header">
+    <div class="wrap masthead">
+        <a class="wordmark" href="#main" aria-label="StealthSurf — на главную"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>StealthSurf</a>
+        <nav class="site-nav" id="menu" aria-label="Разделы сайта"><a href="#about-us">Подключение</a><a href="#smart-location">Роутер</a><a href="#server-lab">Сервер</a><a href="#price-service">Тарифы</a><a href="#question-answer">FAQ</a></nav>
+        <div class="header-acts"><button class="console-button" type="button" data-open-demo="console"><span class="terminal-icon" aria-hidden="true">›_</span> Консоль</button><button type="button" class="nav-toggle" aria-expanded="false" aria-controls="menu" aria-label="Открыть меню"><span></span><span></span></button></div>
     </div>
 </header>
-<main>
-    <div id="main" class="slide">
-        <button id="main-button-give-config" class="button" type="button" data-open-demo="config">
-            <span>О VPN-конфиге</span>
-            <span class="arrow" aria-hidden="true"></span>
-        </button>
-        <p class="main-text-information">Демо Stealthsurf VPN. Посмотрите, как устроены профиль подключения и выделенный сервер.</p>
-        <h1 id="main-text-title">Интернет, каким он<br> и должен быть</h1>
-    </div>
-    <div id="main-iPad" class="slide" >
-        <div class="iPad">
-            <div class="card-content"></div>
-        </div>
-    </div>
-    <div id="slider-block" class="slide">
-        <div class="storage-block">
-            <div class="block">VLESS</div>
-            <div class="block">TROJAN</div>
-            <div class="block">HYSTERIA</div>
-            <div class="block">SS</div>
-            <div class="block">WG</div>
-            <div class="block">AMNEZIA</div>
-            <div class="block">HTTP</div>
-            <div class="block">SOCKS5</div>
-            <div class="block">OUTLINE</div>
-            <div class="block">MTPROTO</div>
-        </div>
-        <div class="storage-block" aria-hidden="true">
-            <div class="block">VLESS</div>
-            <div class="block">TROJAN</div>
-            <div class="block">HYSTERIA</div>
-            <div class="block">SS</div>
-            <div class="block">WG</div>
-            <div class="block">AMNEZIA</div>
-            <div class="block">HTTP</div>
-            <div class="block">SOCKS5</div>
-            <div class="block">OUTLINE</div>
-            <div class="block">MTPROTO</div>
-        </div>
-    </div>
-    <div id="information-about-us" class="slide">
-        <span id="about-us" class="section-anchor" aria-hidden="true"></span>
-        <div class="information-block-phone">
-            <div class="about-us-block-phone"></div>
-        </div>
-        <div class="information-block-text">
-            <h2 class="about-us-title">VPN на телефоне</h2>
-            <p class="about-us-text">На экране показан пример проверки скорости. В демо можно изучить интерфейс сервиса и устройство сервера.</p>
-            <ul class="about-us-list" id="list-about">
-                <li>Профили подключения</li>
-                <li>Выбор протокола и локации</li>
-                <li>Конфигурации для разных устройств</li>
-            </ul>
-        </div>
-    </div>
-    <div id="smart-location" class="slide">
-        <div class="smart-location-title">
-            <p class="title-smart">Умная локация</p>
-            <p class="title-smart-smoll">Локации и способы подключения в концепте Stealthsurf.</p>
-        </div>
-        <div class="smart-location-allblock">
-            <div class="smart-location-lentablock">
-                <div class="smart-location-block">
-                    <div class="smart-location-block-icon">
-                        <img class="hardware-mark" src="Photo/router-mark.webp" width="240" height="192" alt="" loading="lazy" decoding="async">
-                    </div>
-                    <div class="smart-location-block-information">
-                        <div class="smart-location-information-title">Несколько устройств</div>
-                        <div class="smart-location-information">
-                            Отдельный профиль для телефона и компьютера.
-                        </div>
-                    </div>
-                </div>
-                <div class="smart-location-block">
-                    <div class="smart-location-block-icon">
-                        <div class="smart-location-icon" style="background-image: url('./Photo/TwytF9h5L5poC1N0Q0Pnsi48A.svg');"></div>
-                        <div class="smart-location-icon-fon"></div>
-                    </div>
-                    <div class="smart-location-block-information">
-                        <div class="smart-location-information-title">Удобная локация</div>
-                        <div class="smart-location-information">
-                            Выбор региона при настройке VPN-профиля.
-                        </div>
-                    </div>
-                </div>
+<main id="content">
+    <section class="hero" id="main" aria-labelledby="hero-title">
+        <div class="wrap hero-inner">
+            <div class="hero-copy">
+                <p class="label hero-label"><span class="line-sample" aria-hidden="true"></span> Гид по VPN</p>
+                <h1 id="hero-title">От телефона<br><em>до сервера.</em></h1>
+                <p class="hero-intro">Что происходит, когда вы включаете VPN? Проследите путь пакета от экрана телефона до серверной платы.</p>
+                <a class="primary-action" href="#about-us">Разобрать подключение</a>
             </div>
-            <div id="next" class="smart-location-lentablock">
-                <div class="smart-location-block">
-                    <div class="smart-location-block-icon">
-                        <div class="smart-location-icon" style="background-image: url('./Photo/UC6uNuxHmwbUmCR4j0Zl19PeDmQ.svg');"></div>
-                        <div class="smart-location-icon-fon"></div>
-                    </div>
-                    <div class="smart-location-block-information">
-                        <div class="smart-location-information-title">Российский IP-адрес</div>
-                        <div class="smart-location-information">
-                            Выделенный российский IP в сценарии приватного сервера.
-                        </div>
-                    </div>
+            <figure class="hero-figure" aria-label="Крупный план сетевого кабеля">
+                <div class="draft-ring" aria-hidden="true"></div><span class="cross cross-a" aria-hidden="true"></span><span class="cross cross-b" aria-hidden="true"></span>
+                <div class="product-view connector-view" data-product="connector"><img src="Photo/connector-studio.webp" width="1100" height="850" alt="Синий кабель Ethernet с металлическим разъёмом и рядом золотых контактов" fetchpriority="high"></div>
+                <figcaption class="object-note"><b>RJ45</b><span>8 контактов</span></figcaption>
+            </figure>
+        </div>
+        <div class="wrap hero-foot"><span class="scroll-hint"><i aria-hidden="true"></i>Листайте вниз</span><span class="material-note">Витая пара <span>/</span> Cat 6A</span></div>
+    </section>
+    <div class="protocol-strip"><div class="wrap protocol-inner"><span class="small-label">Протоколы и клиенты</span><ul><li>WireGuard</li><li>VLESS</li><li>Outline</li><li>Hysteria</li><li>Amnezia</li><li>Trojan</li><li>Shadowsocks</li><li>SOCKS5</li><li>HTTP</li><li>MTProto</li></ul></div></div>
+    <section class="phone-section" id="about-us" aria-labelledby="phone-title">
+        <div class="phone-pin"><div class="wrap phone-layout">
+            <div class="phone-copy">
+                <p class="label"><span class="line-sample" aria-hidden="true"></span> Подключение</p>
+                <h2 id="phone-title">VPN <br><em>на телефоне.</em></h2>
+                <p class="section-intro">Прокрутите страницу или выберите этап, чтобы включить VPN в демо.</p>
+                <div class="phone-steps" role="group" aria-label="Этап подключения" hidden>
+                    <button type="button" aria-pressed="true" data-phone-step="0">Профиль</button><button type="button" aria-pressed="false" data-phone-step="1">Соединение</button><button type="button" aria-pressed="false" data-phone-step="2">Туннель</button>
                 </div>
-                <div class="smart-location-block">
-                    <div class="smart-location-block-icon">
-                        <div class="smart-location-icon" style="background-image: url('./Photo/jVeQ2JgWtCS3jBxfyWcw9rqw4.svg');"></div>
-                        <div class="smart-location-icon-fon"></div>
-                    </div>
-                    <div class="smart-location-block-information">
-                        <div class="smart-location-information-title">Поддержка Outline с LTE</div>
-                        <div class="smart-location-information">
-                            Сценарий для Outline в мобильной сети.
-                        </div>
-                    </div>
-                </div>
+                <p class="step-explainer" id="phone-note">Профиль открыт. Пока VPN выключен, трафик идёт обычным маршрутом.</p>
             </div>
+            <figure class="phone-figure" aria-label="Виджет подключения StealthSurf на смартфоне">
+                <span class="phone-orbit" aria-hidden="true"></span><div class="product-view phone-view" data-product="phone"><img src="Photo/phone-studio.webp" width="600" height="780" alt="Экран StealthSurf с выбранным профилем Амстердама" loading="lazy"></div>
+                <figcaption><span class="label">Виджет VPN</span><span class="signal-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span></figcaption>
+            </figure>
+        </div></div>
+    </section>
+    <section class="home-section wrap" id="smart-location" aria-labelledby="router-title">
+        <figure class="router-figure" aria-label="Домашний Wi-Fi роутер с портами Ethernet">
+            <div class="router-grid" aria-hidden="true"></div>
+            <div class="product-view router-view" data-product="router"><img src="Photo/router-studio.webp" width="1100" height="850" alt="Светлый двухантенный роутер с синим портом WAN и двумя портами LAN" loading="lazy"></div>
+            <figcaption class="router-legend"><b>Домашний роутер</b><span>WAN / LAN</span></figcaption>
+        </figure>
+        <div class="router-copy"><p class="label"><span class="line-sample" aria-hidden="true"></span> По Wi-Fi</p><h2 id="router-title">Домашний<br><em>роутер.</em></h2>
+            <p class="section-intro">Дома телефон отправляет пакеты по Wi-Fi на роутер. Отсюда они уходят в сеть провайдера.</p>
+            <div class="router-switch" role="group" aria-label="Что рассмотреть на роутере" hidden><button type="button" data-router-view="wifi" aria-pressed="true">Антенны</button><button type="button" data-router-view="ports" aria-pressed="false">Порты</button></div>
+            <p class="part-note" id="router-note" aria-live="polite">Две антенны принимают и передают радиосигнал между роутером и устройствами дома.</p>
         </div>
-    </div>
-    <div id="private-servers" class="slide">
-        <div class="private-servers-block-phone">
-            <div class="private-servers-phone"></div>
-        </div>
-        <div class="private-servers-block">
-            <h2 class="private-servers-title">Приватные серверы</h2>
-            <div class="private-servers-information">
-                <p>Отдельный сервер с выделенным IP и настройкой доступа. Посмотрите, из чего он состоит и как передаёт трафик.</p>
-            </div>
-            <div class="private-servers-button-purchase-console">
-                <button class="button-purchase-console" type="button" data-open-demo="private">О тарифе <span class="arrow" aria-hidden="true"></span></button>
-                <a class="plain-link server-jump" href="#server-lab">
-                    <img src="Photo/cpu-mark.webp" width="240" height="192" alt="" loading="lazy" decoding="async">
-                    Посмотреть сервер в 3D
-                </a>
-            </div>
-        </div>
-    </div>
+        <dl class="profile-options">
+            <div><dt>Несколько устройств</dt><dd>Для телефона и компьютера можно создать отдельные профили.</dd></div>
+            <div><dt>Выбор локации</dt><dd>Регион задаётся в профиле. В демотарифе «Приватный» предусмотрен выделенный российский IP.</dd></div>
+            <div><dt>Outline и LTE</dt><dd>В демо есть профиль Outline для мобильной сети.</dd></div>
+        </dl>
+    </section>
     <section class="server-lab" id="server-lab" aria-labelledby="server-title">
         <div class="server-intro">
-            <h2 id="server-title">Что внутри сервера</h2>
-            <p>Прокручивайте страницу, чтобы облететь сервер, разобрать его и проследить путь пакета до домашнего роутера.</p>
+            <p class="label"><span class="line-sample" aria-hidden="true"></span> В дата-центре</p>
+            <h2 id="server-title">Под крышкой <em>сервера.</em></h2>
+            <p>Поверните сервер, поднимите крышку и рассмотрите плату. В конце разбора увидите, как ответ возвращается домой.</p>
         </div>
         <div class="server-story">
             <div class="server-pin">
@@ -223,110 +134,34 @@
                             </ol>
                         </article>
                     </div>
-                    <p class="server-note">Учебная модель. Характеристики приведены для примера.</p>
+                    <p class="server-note">Характеристики показанной модели.</p>
                 </div>
             </div>
         </div>
     </section>
-    <section id="price-service" class="slide pricing-section">
-        <h2 class="price-service-title">Стоимость сервиса</h2>
-        <p class="price-service-text">Пример тарифов Stealthsurf. Оформление подписки недоступно.</p>
-        <div class="price-service-All-block">
-            <article class="price-service-block plan-card">
-                <div class="price-block">
-                    <h3 class="plan-name">Старт</h3>
-                    <p class="price-price">69 ₽<span>/год</span></p>
-                    <hr class="horizantal-rule">
-                    <ul class="price-list about-us-list">
-                        <li>Базовый VPN-профиль</li>
-                        <li>Общий IP-адрес</li>
-                        <li>Выбор протокола</li>
-                    </ul>
-                    <button class="price-button-purchase" type="button" data-plan="Старт">Посмотреть</button>
-                </div>
-            </article>
-            <article class="price-service-block plan-card plan-card-featured">
-                <div class="price-block">
-                    <h3 class="plan-name">Плюс</h3>
-                    <p class="price-price">199 ₽<span>/год</span></p>
-                    <hr class="horizantal-rule">
-                    <ul class="price-list about-us-list">
-                        <li>Несколько устройств</li>
-                        <li>Умная локация</li>
-                        <li>Фильтрация рекламы</li>
-                        <li>Игровой режим — beta</li>
-                    </ul>
-                    <button class="price-button-purchase" type="button" data-plan="Плюс">Посмотреть</button>
-                </div>
-            </article>
-            <article class="price-service-block plan-card">
-                <div class="price-block">
-                    <h3 class="plan-name">Приватный</h3>
-                    <p class="price-price">1 790 ₽<span>/год</span></p>
-                    <hr class="horizantal-rule">
-                    <ul class="price-list about-us-list">
-                        <li>Отдельный сервер</li>
-                        <li>Выделенный IP</li>
-                        <li>Управление доступом</li>
-                    </ul>
-                    <button class="price-button-purchase" type="button" data-plan="Приватный">Посмотреть</button>
-                </div>
-            </article>
+    <section id="price-service" class="pricing"><div class="wrap">
+        <div class="split-heading"><div><p class="label"><span class="line-sample" aria-hidden="true"></span> Планы StealthSurf</p><h2>Тарифы</h2></div><p>Три варианта для сравнения. Цены демонстрационные.</p></div>
+        <div class="plans">
+            <article class="plan"><h3>Старт</h3><p class="plan-description">Для одного устройства.</p><p class="price">69 ₽ <span>/ год</span></p><ul><li>VPN-профиль</li><li>Общий IP-адрес</li><li>Выбор протокола</li></ul><button type="button" data-plan="Старт">О тарифе «Старт»</button></article>
+            <article class="plan"><h3>Плюс</h3><p class="plan-description">Для телефона и компьютера.</p><p class="price">199 ₽ <span>/ год</span></p><ul><li>Несколько устройств</li><li>Подбор локации</li><li>Фильтр рекламы</li><li>Игровой режим в бета-версии</li></ul><button type="button" data-plan="Плюс">О тарифе «Плюс»</button></article>
+            <article class="plan" id="private-servers"><h3>Приватный</h3><p class="plan-description">Для отдельного сервера.</p><p class="price">1 790 ₽ <span>/ год</span></p><ul><li>Собственный сервер</li><li>Выделенный IP-адрес</li><li>Настройка доступа</li></ul><button type="button" data-plan="Приватный">О приватном сервере</button></article>
         </div>
-    </section>
-    <section id="question-answer" class="slide faq-section">
-        <div class="question-answer-block-box">
-            <div class="question-answer-box">
-                <h2 class="question-answer-box-title">Вопросы и ответы</h2>
-                <p class="question-answer-box-text">О подключении, подписке и демоверсии.</p>
-            </div>
-        </div>
-        <div class="question-answer-block-list-question">
-            <article class="question-answer-container">
-                <button class="question-header" type="button" aria-expanded="false" aria-controls="answer-1">Как получить VPN-конфигурацию?</button>
-                <div class="answer-wrapper" aria-hidden="true" id="answer-1"><div class="answer-content">Никак: это учебный сайт без VPN-сервера и выдачи конфигураций. Кнопки показывают интерфейсный сценарий.</div></div>
-            </article>
-            <article class="question-answer-container">
-                <button class="question-header" type="button" aria-expanded="false" aria-controls="answer-2">Можно ли оформить подписку?</button>
-                <div class="answer-wrapper" aria-hidden="true" id="answer-2"><div class="answer-content">Нет. Тарифы и цены — примеры для макета; платёжная система и аккаунты не подключены.</div></div>
-            </article>
-            <article class="question-answer-container">
-                <button class="question-header" type="button" aria-expanded="false" aria-controls="answer-3">Какая здесь скорость соединения?</button>
-                <div class="answer-wrapper" aria-hidden="true" id="answer-3"><div class="answer-content">Сайт не устанавливает соединение, поэтому скорость не измеряется. Указанные в исходной концепции значения не являются обещанием работающего сервиса.</div></div>
-            </article>
-            <article class="question-answer-container">
-                <button class="question-header" type="button" aria-expanded="false" aria-controls="answer-4">Как обрабатываются мои данные?</button>
-                <div class="answer-wrapper" aria-hidden="true" id="answer-4"><div class="answer-content">Не отправляйте сюда персональные данные. У демо нет формы регистрации, аналитики аккаунта или серверной части VPN.</div></div>
-            </article>
-            <article class="question-answer-container">
-                <button class="question-header" type="button" aria-expanded="false" aria-controls="answer-5">Работает ли сервис на телефоне и компьютере?</button>
-                <div class="answer-wrapper" aria-hidden="true" id="answer-5"><div class="answer-content">Сам макет адаптирован под разные размеры экрана. VPN-клиент и приложения для устройств в проект не входят.</div></div>
-            </article>
-            <article class="question-answer-container">
-                <button class="question-header" type="button" aria-expanded="false" aria-controls="answer-6">Куда обратиться за поддержкой?</button>
-                <div class="answer-wrapper" aria-hidden="true" id="answer-6"><div class="answer-content">Поддержка не подключена, это портфолио-проект. Рабочие контакты появятся, если у сервиса будет настоящий владелец и канал поддержки.</div></div>
-            </article>
+    </div></section>
+    <section class="faq wrap" id="question-answer"><div><p class="label"><span class="line-sample" aria-hidden="true"></span> Справка</p><h2>Есть <em>вопросы?</em></h2></div>
+        <div class="faq-list">
+            <details name="faq"><summary>Этот виджет включает VPN на моём телефоне?</summary><p>Виджет показывает, как выглядит подключение. Настройки вашего устройства остаются прежними.</p></details>
+            <details name="faq"><summary>Что находится в VPN-профиле?</summary><p>Адрес сервера, протокол и параметры доступа. В рабочем приложении профиль можно импортировать файлом или ссылкой.</p><button class="text-action" type="button" data-open-demo="config">Посмотреть пример профиля</button></details>
+            <details name="faq"><summary>Почему на телефоне выбран Амстердам?</summary><p>Это локация сервера в примере. Телефон может находиться в другом городе.</p></details>
+            <details name="faq"><summary>Измеряет ли сайт скорость соединения?</summary><p>Измерения здесь нет. По сцене можно проследить маршрут пакета, а скорость реального соединения покажет тест в VPN-клиенте.</p></details>
+            <details name="faq"><summary>Можно ли купить подписку?</summary><p>Это портфолио-проект. Тарифы можно сравнить, а оплата и выдача конфигураций здесь недоступны.</p></details>
+            <details name="faq"><summary>Нужен ли аккаунт для просмотра?</summary><p>Все сцены и примеры открываются без регистрации.</p></details>
         </div>
     </section>
 </main>
-<footer>
-    <div class="footer-hight">Stealthsurf VPN</div>
-    <hr id="footer-horizantal-rule">
-    <div class="footer-lower">
-        <p>
-           Учебный концепт для портфолио. Это не работающий VPN-сервис.
-        </p>
-    </div>
-</footer>
-<dialog class="demo-dialog" id="demo-dialog" aria-labelledby="demo-dialog-title">
-    <form method="dialog" class="demo-dialog-close-row"><button class="demo-dialog-close" aria-label="Закрыть окно">×</button></form>
-    <span class="demo-dialog-kicker">УЧЕБНЫЙ ПРОЕКТ</span>
-    <h2 id="demo-dialog-title">Эта функция пока не подключена</h2>
-    <p id="demo-dialog-message">На странице показан интерфейсный сценарий без реального VPN-сервиса.</p>
-    <button class="demo-dialog-action" id="demo-dialog-action" type="button">Посмотреть тарифы</button>
-</dialog>
-<div class="setka" aria-hidden="true"></div>
+<footer class="site-footer"><div class="wrap footer-inner"><a class="wordmark" href="#main" aria-label="StealthSurf — в начало"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>StealthSurf</a><p>Интерактивный гид по VPN</p><a href="#main">Наверх</a></div></footer>
+<dialog id="demo-dialog" aria-labelledby="demo-dialog-title"><form method="dialog"><button class="dialog-cross" aria-label="Закрыть окно">×</button></form><p class="label">Демо StealthSurf</p><h2 id="demo-dialog-title"></h2><p id="demo-dialog-message"></p><img id="console-image" src="Photo/0uQOtt1RDWO57ZysKpGCDztBYu8.webp" alt="Список профилей подключения в консоли StealthSurf" loading="lazy" hidden><dl id="demo-details"></dl><form method="dialog"><button class="primary-action">Закрыть</button></form></dialog>
 <script src="main.js" defer></script>
+<script type="module" src="product-scenes.js"></script>
 <script type="module" src="server-lab.js"></script>
 </body>
 </html>
